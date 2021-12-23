@@ -1,0 +1,26 @@
+body {
+  background-color: #4747da;
+}
+
+input {
+  color: white;
+  border-radius: 10%;
+}
+input.alphabet {
+  border-color: white;
+  background-color: #4747da;
+}
+
+input.rejouer {
+  border-color: #c73eb0;
+  background-color: #c73eb0;
+}
+
+#guessW {
+  color: white;
+  letter-spacing: 1px;
+}
+
+#resultat {
+  color: #c73eb0;
+}
