@@ -56,37 +56,6 @@ document.getElementById("rejouer").addEventListener("mouseout", function () {
   document.getElementById("rejouer").style.backgroundColor = "#c73eb0";
 });
 
-document.getElementById("a").addEventListener("click", function (e) {
-  e.preventDefault;
-  if (nbErreur < 10) {
-    var nbDeLettreATrouverAvant = NbTrouverLettres();
-    var modification = "";
-    for (var i = 0; i < findMot.length; i++) {
-      if (findMot[i] == document.getElementById("a").value) {
-        modification += document.getElementById("a").value;
-      } else {
-        modification += guessWord[i];
-      }
-    }
-    guessWord = modification;
-    document.getElementById("guessW").innerHTML = guessWord;
-    document.getElementById("a").disabled = true;
-    document.getElementById("a").style.color = "#bebbbb";
-    document.getElementById("a").style.borderColor = "#bebbbb";
-    document.getElementById("a").style.backgroundColor = "#b34ca5";
-    var nbDeLettreATrouverApres = NbTrouverLettres();
-    if (nbDeLettreATrouverAvant - nbDeLettreATrouverApres == 0) {
-      //Il n'y a pas eu de changement donc c'était une erreur
-      nbErreur++;
-      if (nbErreur == 10) {
-        document.getElementById("resultat").innerHTML = "Tu as perdu la partie !";
-      }
-    } else if (nbDeLettreATrouverApres == 0) {
-      document.getElementById("resultat").innerHTML = "Tu as gagné la partie !";
-    }
-  }
-});
-
 alphabet.forEach(function (lettre) {
   lettre.addEventListener("click", function (e) {
     e.preventDefault;
@@ -131,4 +100,3 @@ alphabet.forEach(function (lettre) {
     lettre.style.backgroundColor = "#4747da";
   });
 });
-    
