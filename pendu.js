@@ -1,4 +1,4 @@
-let findMots = ["avion","bateau","voiture","train","fusee","velo","car","moto",];
+let findMots = ["avion","bateau","voiture","train","fusee","velo","car","moto"];
 
 function randomMot() {
   return findMots[Math.floor(Math.random() * findMots.length)];
