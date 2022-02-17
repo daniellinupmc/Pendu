@@ -59,7 +59,7 @@ document.getElementById("rejouer").addEventListener("mouseout", function () {
 alphabet.forEach(function (lettre) {
   lettre.addEventListener("click", function (e) {
     e.preventDefault;
-    if (nbErreur < 10) {
+    if (nbErreur < 10 && document.getElementById("resultat").innerHTML=="") {
       var nbDeLettreATrouverAvant = NbTrouverLettres();
       var modification = "";
       for (var i = 0; i < findMot.length; i++) {
